@@ -48,6 +48,10 @@ class InstanceBuilder{
     }
 
     public function unpackDeploymentImage(): self{
+        if(file_exists("{$this->installLocation}/{$this->os}-{$this->version}-deployment-image.qcow2")){
+            return $this;
+        }
+
         ssh2_exec($this->sshSession, "cd {$this->installLocation} && zstd -d -T0 {$this->installLocation}/{$this->os}-{$this->version}-{$this->deploymentImageExtension}");
 
         return $this;
