@@ -2,4 +2,5 @@
 .env
 composer.lock
 phpunit.xml
+.phpunit.cache
 private/deploymentImages/*
