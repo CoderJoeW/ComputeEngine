@@ -1,0 +1,16 @@
+{
+    "name": "computeengine/computeengine",
+    "autoload": {
+        "psr-4": {
+            "ComputeEngine\\": "src/",
+            "ComputeEngine\\Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "devster/ubench": "^2.1"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
