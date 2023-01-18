@@ -75,12 +75,10 @@ class InstanceBuilderTest extends TestCase{
      * @covers moveToFinalName
      */
     public function testMoveToFinalName(){
-        $os = 'centos';
-        $version = '7';
         $name = 'testing';
 
-        $this->instanceBuilder->setOS($os)
-            ->setVersion($version)
+        $this->instanceBuilder->setOS('centos')
+            ->setVersion('7')
             ->downloadDeploymentImage()
             ->unpackDeploymentImage();
 
